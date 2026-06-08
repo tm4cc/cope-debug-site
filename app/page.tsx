@@ -355,7 +355,7 @@ export default function Page() {
                 <a
                     href="/CopeDebug.jar"
                     download="CopeDebug.jar"
-                    className="rounded-2xl bg-white px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02]"
+                    className="rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3.5 font-semibold text-white shadow-[0_0_40px_rgba(124,58,237,0.35)] transition hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(124,58,237,0.45)]"
                 >
                   Download
                 </a>
