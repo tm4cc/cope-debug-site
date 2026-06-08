@@ -243,11 +243,13 @@ export default function Page() {
                   </div>
 
                   <div className="p-4">
-                    <img
-                        src="/image.png"
-                        alt="Cope Debug preview"
-                        className="h-[320px] w-full rounded-[1.25rem] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
-                    />
+                    <div className="flex min-h-[520px] items-center justify-center overflow-hidden rounded-[1.25rem] bg-black/30 p-4">
+                      <img
+                          src="/image.png"
+                          alt="Cope Debug preview"
+                          className="max-h-[520px] w-full object-contain shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+                      />
+                    </div>
                   </div>
                 </div>
               </Card>
