@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const features = [
   {
@@ -66,7 +65,13 @@ function DiscordIcon({ className = "" }: { className?: string }) {
   );
 }
 
-function SectionTitle({ title, subtitle }: { title: string; subtitle: string }) {
+function SectionTitle({
+                        title,
+                        subtitle,
+                      }: {
+  title: string;
+  subtitle: string;
+}) {
   return (
       <div className="mb-8">
         <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-zinc-300 backdrop-blur-xl">
@@ -92,7 +97,7 @@ function Card({
 }) {
   return (
       <div
-          className={`rounded-[1.75rem] border border-white/10 bg-white/6 backdrop-blur-2xl shadow-[0_20px_70px_rgba(0,0,0,0.35)] ${className}`}
+          className={`rounded-[1.75rem] border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_70px_rgba(0,0,0,0.35)] ${className}`}
       >
         {children}
       </div>
@@ -140,7 +145,10 @@ export default function Page() {
           </div>
         </header>
 
-        <section id="top" className="mx-auto max-w-7xl px-4 pb-20 pt-16 md:px-6 md:pt-24">
+        <section
+            id="top"
+            className="mx-auto max-w-7xl px-4 pb-20 pt-16 md:px-6 md:pt-24"
+        >
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
@@ -323,7 +331,10 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="download" className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
+        <section
+            id="download"
+            className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14"
+        >
           <div className="overflow-hidden rounded-[2rem] border border-purple-400/20 bg-[radial-gradient(circle_at_top_left,rgba(168,85,247,0.25),transparent_35%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-8 shadow-[0_0_80px_rgba(124,58,237,0.18)] md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
@@ -334,9 +345,9 @@ export default function Page() {
                   Download Cope Debug
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300">
-                  Version: 1.0.0. System requirements: Minecraft Java, Meteor Client,
-                  and a compatible Fabric setup. Changelog preview: initial public
-                  release with chunk and spawner utility features.
+                  Version: 1.0.0. System requirements: Minecraft Java, Meteor
+                  Client, and a compatible Fabric setup. Changelog preview:
+                  initial public release with chunk and spawner utility features.
                 </p>
               </div>
 
@@ -376,23 +387,23 @@ export default function Page() {
               </div>
 
               <div className="flex flex-wrap gap-5 text-sm text-zinc-300">
-                <Link href="#about" className="transition hover:text-white">
+                <a href="#about" className="transition hover:text-white">
                   About
-                </Link>
-                <Link href="#features" className="transition hover:text-white">
+                </a>
+                <a href="#features" className="transition hover:text-white">
                   Features
-                </Link>
-                <Link href="#faq" className="transition hover:text-white">
+                </a>
+                <a href="#faq" className="transition hover:text-white">
                   FAQ
-                </Link>
-                <Link
+                </a>
+                <a
                     href="https://discord.gg/NNG6FBjXWT"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition hover:text-white"
                 >
                   Discord
-                </Link>
+                </a>
               </div>
             </div>
 
