@@ -412,6 +412,4 @@ export default function Page() {
         </footer>
       </main>
   );
-}git add .
-    git commit -m "Fix build"
-git push
+}
