@@ -2,23 +2,6 @@
 
 import { motion } from "framer-motion";
 
-export const metadata = {
-  title: "Cope Debug - Modern Minecraft Utility for DonutSMP",
-  description: "Cope Debug is a premium DonutSMP Meteor utility addon. Find player chunks, spawners, and bases with enhanced chunk info and clean glassmorphism UI.",
-  keywords: ["cope debug", "minecraft utility", "donutsmp", "meteor addon", "chunk finder", "spawner finder", "base finder"],
-  authors: [{ name: "Cope Debug" }],
-  generator: "Cope Debug",
-  openGraph: {
-    title: "Cope Debug - Modern Minecraft Utility",
-    description: "Cope Debug is a premium DonutSMP Meteor utility addon for chunk and spawner finding.",
-    type: "website",
-    url: "https://copedebug.org",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
-
 const features = [
   {
     icon: "◈",
@@ -202,9 +185,7 @@ export default function Page() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
-                Cope Debug is a premium DonutSMP Meteor utility addon designed to deliver
-                enhanced information, clean visuals, and quality-of-life tools for
-                players who want fast, reliable base-finding support.
+                Cope Debug is a premium DonutSMP Meteor utility addon designed to deliver enhanced information, clean visuals, and quality-of-life tools for players who want fast, reliable base-finding support.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -364,9 +345,7 @@ export default function Page() {
                   Download Cope Debug
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300">
-                  Version: 1.0.0. System requirements: Minecraft Java, Meteor
-                  Client, and a compatible Fabric setup. Changelog preview:
-                  initial public release with chunk and spawner utility features.
+                  Version: 1.0.0. System requirements: Minecraft Java, Meteor Client, and a compatible Fabric setup. Changelog preview: initial public release with chunk and spawner utility features.
                 </p>
               </div>
 
@@ -433,4 +412,6 @@ export default function Page() {
         </footer>
       </main>
   );
-}
+}git add .
+    git commit -m "Fix build"
+git push
