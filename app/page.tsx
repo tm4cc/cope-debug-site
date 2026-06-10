@@ -22,6 +22,35 @@ const features = [
   },
 ];
 
+const stats = [
+  { value: "1,000+", label: "Downloads" },
+  { value: "100%", label: "Uptime" },
+  { value: "24/7", label: "Support" },
+];
+
+const comparison = [
+  ["Player Chunk Finder", "✓"],
+  ["Spawner Finder", "✓"],
+  ["Chunk Analysis", "✓"],
+  ["Updates", "✓"],
+  ["Support", "✓"],
+];
+
+const changelog = [
+  {
+    version: "v1.2.0",
+    text: "Performance improvements and polish updates.",
+  },
+  {
+    version: "v1.1.0",
+    text: "New feature additions and UI refinements.",
+  },
+  {
+    version: "v1.0.0",
+    text: "Initial public release.",
+  },
+];
+
 const whyCards = [
   {
     title: "Fast Results",
@@ -29,7 +58,7 @@ const whyCards = [
   },
   {
     title: "Premium Design",
-    text: "Dark glassmorphism UI with a subtle white glow, soft shadows, and strong visual hierarchy.",
+    text: "Dark glassmorphism UI with subtle glow, soft shadows, and strong visual hierarchy.",
   },
   {
     title: "Simple Workflow",
@@ -104,13 +133,40 @@ function Card({
   );
 }
 
+function Reveal({
+                  children,
+                  delay = 0,
+                  className = "",
+                }: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  return (
+      <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay }}
+          className={className}
+      >
+        {children}
+      </motion.div>
+  );
+}
+
 export default function Page() {
   return (
-      <main className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_24%),radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,#050505_0%,#090909_45%,#050505_100%)] text-white">
-        <div className="fixed inset-0 -z-10 opacity-15 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
-        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.08)_100%)]" />
+      <main className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_24%),radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_34%),linear-gradient(180deg,#050505_0%,#090909_45%,#050505_100%)] text-white">
+        <div className="fixed inset-0 -z-10 opacity-[0.10] [background-image:radial-gradient(rgba(255,255,255,0.18)_1px,transparent_1px)] [background-size:22px_22px]" />
+        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_0_35%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.06),transparent_0_32%),radial-gradient(circle_at_50%_80%,rgba(255,255,255,0.05),transparent_0_30%)]" />
+        <div className="pointer-events-none fixed inset-0 -z-10 opacity-60">
+          <div className="absolute left-[10%] top-[18%] h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute right-[12%] top-[30%] h-72 w-72 rounded-full bg-white/8 blur-3xl" />
+          <div className="absolute bottom-[10%] left-[35%] h-64 w-64 rounded-full bg-white/6 blur-3xl" />
+        </div>
 
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-2xl">
+        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-3xl shadow-[0_0_40px_rgba(255,255,255,0.05)]">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
             <a href="#top" className="flex items-center gap-3">
               <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-[0_0_35px_rgba(255,255,255,0.1)]">
@@ -150,18 +206,14 @@ export default function Page() {
             className="mx-auto max-w-7xl px-4 pb-20 pt-16 md:px-6 md:pt-24"
         >
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-            >
+            <Reveal>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-zinc-300 backdrop-blur-xl">
                 <span className="h-2 w-2 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.5)]" />
                 Modern Minecraft Utility
               </div>
 
               <div className="mb-6 flex items-center gap-4">
-                <div className="h-16 w-16 overflow-hidden rounded-3xl border border-white/10 bg-black/50 shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+                <div className="h-20 w-20 overflow-hidden rounded-3xl border border-white/10 bg-black/50 shadow-[0_0_40px_rgba(255,255,255,0.1)]">
                   <img
                       src="/logo.jpg"
                       alt="Cope Debug logo"
@@ -208,13 +260,9 @@ export default function Page() {
                   Discord
                 </a>
               </div>
-            </motion.div>
+            </Reveal>
 
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-            >
+            <Reveal delay={0.1}>
               <Card className="overflow-hidden p-5">
                 <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%),linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))]">
                   <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.05),transparent)]" />
@@ -253,7 +301,18 @@ export default function Page() {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </Reveal>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {stats.map((stat, i) => (
+                <Reveal key={stat.label} delay={i * 0.06}>
+                  <Card className="p-6">
+                    <div className="text-3xl font-black text-white">{stat.value}</div>
+                    <div className="mt-2 text-sm text-zinc-400">{stat.label}</div>
+                  </Card>
+                </Reveal>
+            ))}
           </div>
         </section>
 
@@ -265,20 +324,14 @@ export default function Page() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {whyCards.map((card, i) => (
-                <motion.div
-                    key={card.title}
-                    initial={{ opacity: 0, y: 18 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.55, delay: i * 0.08 }}
-                >
+                <Reveal key={card.title} delay={i * 0.08}>
                   <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/8">
                     <h3 className="text-lg font-bold text-white">{card.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-400">
                       {card.text}
                     </p>
                   </Card>
-                </motion.div>
+                </Reveal>
             ))}
           </div>
         </section>
@@ -291,13 +344,7 @@ export default function Page() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {features.map((feature, i) => (
-                <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.55, delay: i * 0.08 }}
-                >
+                <Reveal key={feature.title} delay={i * 0.08}>
                   <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/8">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-white/15 to-white/5 text-2xl text-white shadow-[0_0_24px_rgba(255,255,255,0.08)]">
                       {feature.icon}
@@ -307,7 +354,53 @@ export default function Page() {
                       {feature.description}
                     </p>
                   </Card>
-                </motion.div>
+                </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <SectionTitle
+                title="Feature comparison"
+                subtitle="A quick scan view so visitors can see what is included at a glance."
+            />
+
+            <Card className="overflow-hidden">
+              <div className="grid grid-cols-[1.4fr_0.6fr] border-b border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold text-zinc-300">
+                <div>Feature</div>
+                <div>Included</div>
+              </div>
+              {comparison.map(([name, included], index) => (
+                  <div
+                      key={name}
+                      className={`grid grid-cols-[1.4fr_0.6fr] px-6 py-4 text-sm ${
+                          index !== comparison.length - 1 ? "border-b border-white/10" : ""
+                      }`}
+                  >
+                    <div className="text-zinc-300">{name}</div>
+                    <div className="font-semibold text-white">{included}</div>
+                  </div>
+              ))}
+            </Card>
+          </div>
+        </section>
+
+        <section id="changelog" className="mx-auto max-w-7xl px-4 py-8 md:px-6">
+          <SectionTitle
+              title="Changelog"
+              subtitle="An active timeline makes the project feel maintained and alive."
+          />
+
+          <div className="space-y-4">
+            {changelog.map((item, i) => (
+                <Reveal key={item.version} delay={i * 0.08}>
+                  <Card className="p-6">
+                    <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                      <p className="text-lg font-bold text-white">{item.version}</p>
+                      <p className="text-sm text-zinc-500">Release notes</p>
+                    </div>
+                    <p className="mt-3 text-sm leading-7 text-zinc-400">{item.text}</p>
+                  </Card>
+                </Reveal>
             ))}
           </div>
         </section>
@@ -381,7 +474,8 @@ export default function Page() {
                 Important
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-50">
-                Make sure to have the OPSEC mod installed, if you do not have this installed you will get banned from DonutSMP.
+                Use at your own risk. Please follow proper opsec and server rules
+                to reduce the chance of account penalties or bans.
               </p>
             </div>
           </div>
@@ -405,6 +499,9 @@ export default function Page() {
                 </a>
                 <a href="#features" className="transition hover:text-white">
                   Features
+                </a>
+                <a href="#changelog" className="transition hover:text-white">
+                  Changelog
                 </a>
                 <a href="#faq" className="transition hover:text-white">
                   FAQ
