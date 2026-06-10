@@ -202,7 +202,7 @@ export default function Page() {
                     href="https://discord.gg/NNG6FBjXWT"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white transition hover:scale-[1.02] hover:bg-white/10"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
                 >
                   <DiscordIcon className="h-5 w-5 text-white" />
                   Discord
@@ -374,6 +374,15 @@ export default function Page() {
                   Discord
                 </a>
               </div>
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-amber-400/30 bg-amber-400/10 p-5 shadow-[0_0_40px_rgba(251,191,36,0.12)] backdrop-blur-xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-200">
+                Important
+              </p>
+              <p className="mt-2 text-sm leading-7 text-amber-50">
+                Make sure to have the OPSEC mod installed, if you do not have this installed you will get banned from DonutSMP.
+              </p>
             </div>
           </div>
         </section>
