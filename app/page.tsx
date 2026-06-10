@@ -2,6 +2,23 @@
 
 import { motion } from "framer-motion";
 
+export const metadata = {
+  title: "Cope Debug - Modern Minecraft Utility for DonutSMP",
+  description: "Cope Debug is a premium DonutSMP Meteor utility addon. Find player chunks, spawners, and bases with enhanced chunk info and clean glassmorphism UI.",
+  keywords: ["cope debug", "minecraft utility", "donutsmp", "meteor addon", "chunk finder", "spawner finder", "base finder"],
+  authors: [{ name: "Cope Debug" }],
+  generator: "Cope Debug",
+  openGraph: {
+    title: "Cope Debug - Modern Minecraft Utility",
+    description: "Cope Debug is a premium DonutSMP Meteor utility addon for chunk and spawner finding.",
+    type: "website",
+    url: "https://copedebug.org",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
+
 const features = [
   {
     icon: "◈",
@@ -40,15 +57,15 @@ const whyCards = [
 const faqs = [
   {
     q: "What is Cope Debug?",
-    a: "It is a Minecraft utility addon for DonutSMP-style gameplay focused on chunk and spawner information.",
+    a: "Cope Debug is a Minecraft utility addon for DonutSMP-style gameplay focused on chunk and spawner information.",
   },
   {
     q: "Will i get banned?",
-    a: "No. This debug is fully undetectable and will not get you banned.",
+    a: "No. Cope Debug is fully undetectable and will not get you banned.",
   },
   {
     q: "Does it help me find bases?",
-    a: "Yes. This debug/addon will help you effortlesly find spawners, bases, and more.",
+    a: "Yes. Cope Debug will help you effortlessly find spawners, bases, and more.",
   },
 ];
 
@@ -180,12 +197,12 @@ export default function Page() {
 
               <h1 className="max-w-xl text-5xl font-black leading-none tracking-tight md:text-7xl">
               <span className="bg-gradient-to-r from-white via-purple-200 to-blue-300 bg-clip-text text-transparent">
-                COPE DEBUG
+                Cope Debug
               </span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
-                A premium DonutSMP Meteor utility addon designed to deliver
+                Cope Debug is a premium DonutSMP Meteor utility addon designed to deliver
                 enhanced information, clean visuals, and quality-of-life tools for
                 players who want fast, reliable base-finding support.
               </p>
