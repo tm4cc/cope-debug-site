@@ -29,7 +29,7 @@ const whyCards = [
   },
   {
     title: "Premium Design",
-    text: "Dark glassmorphism UI with neon accents, soft shadows, and strong visual hierarchy.",
+    text: "Dark glassmorphism UI with subtle neon glow, soft shadows, and strong visual hierarchy.",
   },
   {
     title: "Simple Workflow",
@@ -75,7 +75,7 @@ function SectionTitle({
   return (
       <div className="mb-8">
         <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-zinc-300 backdrop-blur-xl">
-          <span className="h-1.5 w-1.5 rounded-full bg-purple-400" />
+          <span className="h-1.5 w-1.5 rounded-full bg-slate-300 shadow-[0_0_14px_rgba(148,163,184,0.55)]" />
           Cope Debug
         </div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
@@ -106,14 +106,14 @@ function Card({
 
 export default function Page() {
   return (
-      <main className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.22),transparent_28%),radial-gradient(circle_at_bottom,rgba(59,130,246,0.14),transparent_22%),linear-gradient(180deg,#050510_0%,#070812_45%,#040408_100%)] text-white">
-        <div className="fixed inset-0 -z-10 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
-        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.18)_100%)]" />
+      <main className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,rgba(148,163,184,0.12),transparent_28%),radial-gradient(circle_at_bottom,rgba(99,102,241,0.10),transparent_22%),linear-gradient(180deg,#050505_0%,#0a0a0a_45%,#050505_100%)] text-white">
+        <div className="fixed inset-0 -z-10 opacity-18 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
+        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.22)_100%)]" />
 
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/25 backdrop-blur-2xl">
+        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-2xl">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
             <a href="#top" className="flex items-center gap-3">
-              <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_0_35px_rgba(168,85,247,0.35)]">
+              <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-[0_0_35px_rgba(148,163,184,0.22)]">
                 <img
                     src="/logo.jpg"
                     alt="Cope Debug logo"
@@ -156,12 +156,12 @@ export default function Page() {
                 transition={{ duration: 0.7 }}
             >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-zinc-300 backdrop-blur-xl">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.5)]" />
+                <span className="h-2 w-2 rounded-full bg-slate-300 shadow-[0_0_12px_rgba(148,163,184,0.55)]" />
                 Modern Minecraft Utility
               </div>
 
               <div className="mb-6 flex items-center gap-4">
-                <div className="h-16 w-16 overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-[0_0_40px_rgba(168,85,247,0.3)]">
+                <div className="h-16 w-16 overflow-hidden rounded-3xl border border-white/10 bg-black/50 shadow-[0_0_40px_rgba(148,163,184,0.18)]">
                   <img
                       src="/logo.jpg"
                       alt="Cope Debug logo"
@@ -179,7 +179,7 @@ export default function Page() {
               </div>
 
               <h1 className="max-w-xl text-5xl font-black leading-none tracking-tight md:text-7xl">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-blue-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
                 Cope Debug
               </span>
               </h1>
@@ -191,7 +191,7 @@ export default function Page() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                     href="#download"
-                    className="rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3.5 font-semibold text-white shadow-[0_0_40px_rgba(124,58,237,0.35)] transition hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(124,58,237,0.45)]"
+                    className="rounded-2xl bg-gradient-to-r from-slate-700 via-slate-600 to-slate-800 px-6 py-3.5 font-semibold text-white shadow-[0_0_45px_rgba(148,163,184,0.20)] transition hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(148,163,184,0.28)]"
                 >
                   Download
                 </a>
@@ -200,9 +200,9 @@ export default function Page() {
                     href="https://discord.gg/NNG6FBjXWT"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-2xl border border-[#5865F2]/30 bg-[#5865F2]/10 px-6 py-3.5 font-semibold text-white transition hover:scale-[1.02] hover:bg-[#5865F2]/20"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-slate-300/20 bg-slate-200/10 px-6 py-3.5 font-semibold text-white transition hover:scale-[1.02] hover:bg-slate-200/15"
                 >
-                  <DiscordIcon className="h-5 w-5" />
+                  <DiscordIcon className="h-5 w-5 text-slate-200" />
                   Discord
                 </a>
               </div>
@@ -214,11 +214,11 @@ export default function Page() {
                 transition={{ duration: 0.8, delay: 0.1 }}
             >
               <Card className="overflow-hidden p-5">
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.35),transparent_35%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]">
+                <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(148,163,184,0.16),transparent_35%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]">
                   <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.06),transparent)]" />
                   <div className="flex items-center justify-between border-b border-white/10 px-4 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-11 w-11 overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+                      <div className="h-11 w-11 overflow-hidden rounded-2xl border border-white/10 bg-black/50">
                         <img
                             src="/logo.jpg"
                             alt="Cope Debug logo"
@@ -230,12 +230,12 @@ export default function Page() {
                           Cope Debug UI
                         </p>
                         <p className="text-xs text-zinc-400">
-                          Glass panels • neon accents • motion
+                          Glass panels • soft glow • motion
                         </p>
                       </div>
                     </div>
 
-                    <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+                    <div className="rounded-full border border-slate-300/20 bg-slate-200/10 px-3 py-1 text-xs font-semibold text-slate-200">
                       Live
                     </div>
                   </div>
@@ -270,7 +270,7 @@ export default function Page() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.55, delay: i * 0.08 }}
                 >
-                  <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-purple-400/30">
+                  <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-slate-300/20 hover:bg-white/[0.07]">
                     <h3 className="text-lg font-bold text-white">{card.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-400">{card.text}</p>
                   </Card>
@@ -294,8 +294,8 @@ export default function Page() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.55, delay: i * 0.08 }}
                 >
-                  <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-purple-400/40 hover:bg-white/[0.07]">
-                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500/30 to-blue-500/20 text-2xl text-white shadow-[0_0_24px_rgba(124,58,237,0.22)]">
+                  <Card className="h-full p-6 transition hover:-translate-y-1 hover:border-slate-300/20 hover:bg-white/[0.07]">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-500/25 to-slate-300/10 text-2xl text-white shadow-[0_0_24px_rgba(148,163,184,0.18)]">
                       {feature.icon}
                     </div>
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -335,10 +335,10 @@ export default function Page() {
             id="download"
             className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14"
         >
-          <div className="overflow-hidden rounded-[2rem] border border-purple-400/20 bg-[radial-gradient(circle_at_top_left,rgba(168,85,247,0.25),transparent_35%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-8 shadow-[0_0_80px_rgba(124,58,237,0.18)] md:p-10">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-300/15 bg-[radial-gradient(circle_at_top_left,rgba(148,163,184,0.12),transparent_35%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-8 shadow-[0_0_80px_rgba(148,163,184,0.12)] md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-purple-200">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-200">
                   Download Section
                 </p>
                 <h2 className="mt-4 text-3xl font-black text-white md:text-5xl">
@@ -353,7 +353,7 @@ export default function Page() {
                 <a
                     href="/CopeDebug.jar"
                     download="CopeDebug.jar"
-                    className="rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3.5 font-semibold text-white shadow-[0_0_40px_rgba(124,58,237,0.35)] transition hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(124,58,237,0.45)]"
+                    className="rounded-2xl bg-gradient-to-r from-slate-700 via-slate-600 to-slate-800 px-6 py-3.5 font-semibold text-white shadow-[0_0_45px_rgba(148,163,184,0.20)] transition hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(148,163,184,0.28)]"
                 >
                   Download
                 </a>
@@ -362,9 +362,9 @@ export default function Page() {
                     href="https://discord.gg/NNG6FBjXWT"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-2xl border border-[#5865F2]/30 bg-[#5865F2]/10 px-6 py-3.5 font-semibold text-white transition hover:bg-[#5865F2]/20"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-slate-300/20 bg-slate-200/10 px-6 py-3.5 font-semibold text-white transition hover:bg-slate-200/15"
                 >
-                  <DiscordIcon className="h-5 w-5" />
+                  <DiscordIcon className="h-5 w-5 text-slate-200" />
                   Discord
                 </a>
               </div>
