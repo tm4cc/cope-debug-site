@@ -474,8 +474,7 @@ export default function Page() {
                 Important
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-50">
-                Use at your own risk. Please follow proper opsec and server rules
-                to reduce the chance of account penalties or bans.
+                Make sure to use the OPSEC mod with this so you do not get banned, This is a meteor client addon so make sure you have meteor in your mods folder too.
               </p>
             </div>
           </div>
